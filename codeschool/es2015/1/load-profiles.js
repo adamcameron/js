@@ -7,7 +7,7 @@ var loadProfiles = function(userNames){
 		_displayFlash(flashMessage);
 	}
 
-	console.log(flashMessage);
+	// console.log(flashMessage); errors
 };
 
 var _displaySpinner = function(message){
