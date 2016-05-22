@@ -1,5 +1,6 @@
 var loadProfiles = function(userNames){
-	if (userNames.length > 3){
+	const MAX_USERS = 3;
+	if (userNames.length > MAX_USERS){
 		let loadingMessage = "This might take a while...";
 		_displaySpinner(loadingMessage);
 		for (let i in userNames) {
