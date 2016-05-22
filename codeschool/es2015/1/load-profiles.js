@@ -1,11 +1,13 @@
 var loadProfiles = function(userNames){
 	if (userNames.length > 3){
-		var loadingMessage = "This might take a while...";
+		let loadingMessage = "This might take a while...";
 		_displaySpinner(loadingMessage);
 	}else{
-		var flashMessage = "Loading profiles";
+		let flashMessage = "Loading profiles";
 		_displayFlash(flashMessage);
 	}
+
+	console.log(flashMessage);
 };
 
 var _displaySpinner = function(message){
