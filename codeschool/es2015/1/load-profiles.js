@@ -2,7 +2,7 @@ var loadProfiles = function(userNames){
 	if (userNames.length > 3){
 		let loadingMessage = "This might take a while...";
 		_displaySpinner(loadingMessage);
-		for (var i in userNames) {
+		for (let i in userNames) {
 			_fetchProfile("/users/" + userNames[i] , function(){
 				console.log("Fetched for ", userNames[i]);
 			});
