@@ -5,24 +5,24 @@ var setPageThread = function(name, {popular, expires, activeClass}) {
     console.log("Active:", activeClass);
 };
 
-console.log("\nAll options");
+console.log("\n\nAll options");
 setPageThread("New version out soon!", {
     popular : true,
     expires : 10000,
     activeClass : "is-page-thread"
 });
 
-console.log("\nSome options");
+console.log("\n\nSome options");
 setPageThread("New version out soon!", {
     popular : true
 });
 
 
-console.log("\nNo options");
+console.log("\n\nNo options");
 try {
     setPageThread("New version out soon!"); // error
 } catch (e){
-    console.log(e);
+    console.log("Errored");
 }
 
 var setPageThread = function(name, {popular, expires, activeClass}={}) {
@@ -32,5 +32,5 @@ var setPageThread = function(name, {popular, expires, activeClass}={}) {
     console.log("Active:", activeClass);
 };
 
-console.log("\nNo options (revised)");
+console.log("\n\nNo options (revised)");
 setPageThread("New version out soon!");
