@@ -5,13 +5,11 @@ let assert = require("chai").assert;
 let numberToMemoryUnits = require("../src/numberToMemoryUnits.js");
 
 let binaryFactor = 1024;
-let units = {
-	kB : binaryFactor
-};
-units.MB = units.kB * binaryFactor;
-units.GB = units.MB * binaryFactor;
-units.TB = units.GB * binaryFactor;
-units.PB = units.TB * binaryFactor;
+
+let units = ["kB", "MB", "GB", "TB", "PB"].reduce(function(units, unit, index){
+	units[unit] = Math.pow(binaryFactor, index + 1);
+	return units; 
+}, {});
 
 describe("Tests for each unit", function(){
 	it("should work for bytes", function(){
