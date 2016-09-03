@@ -9,8 +9,9 @@ let numberToMemoryUnits = function(bytes){
 		numberOfBytesAsUnit /= binaryDivisor;
 		unit = units.shift();
 	}
+	let roundedValue = Math.floor(numberOfBytesAsUnit);
 
-	return Math.floor(numberOfBytesAsUnit) + unit;
+	return `${roundedValue}${unit}`;
 }
 
 module.exports = numberToMemoryUnits;
