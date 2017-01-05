@@ -8,4 +8,4 @@ p = new Promise(
 	}
 );
 console.log("After promise");
-console.dir(p);
+console.log(p);

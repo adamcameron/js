@@ -10,5 +10,5 @@ p = new Promise(
 	console.log("reject() provided via then() using reason " + reason);
 	return Promise.reject(reason);
 });
-console.log("After promise");
+//console.log("After promise");
 console.dir(p);
